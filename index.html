@@ -34,7 +34,7 @@
     header {
       background: linear-gradient(135deg, var(--dark-bg), var(--primary-color));
       color: white;
-      padding: 80px 20px;
+      padding: 60px 20px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -49,6 +49,31 @@
       bottom: 0;
       background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></svg>') repeat;
       opacity: 0.1;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 50px;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .logo-container img {
+      height: 160px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     header h1 {
@@ -143,7 +168,7 @@
     }
 
     a:hover {
-      color: var(--secondary-color);
+      color: #cc2f26; /* Slightly darker red for hover */
     }
 
     .expertise-tags {
@@ -166,8 +191,6 @@
 
     .expertise-tag:hover {
       background: var(--primary-color);
-      color: white;
-      transform: translateY(-2px);
     }
 
     @keyframes fadeInUp {
@@ -211,6 +234,9 @@
 <body>
 
 <header>
+  <div class="logo-container">
+    <img src="logo.png" alt="BrainLinks Logo">
+  </div>
   <h1>BrainLinks Software Canada Inc.</h1>
   <p>Building Smart Links Between Ideas and Technology</p>
 </header>
