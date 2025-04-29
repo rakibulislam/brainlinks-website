@@ -9,12 +9,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #2563eb;
-      --secondary-color: #1e40af;
+      --primary-color: #FF3B30;
+      --secondary-color: #cc2f26;
       --text-color: #1f2937;
       --light-bg: #f8fafc;
-      --dark-bg: #0f172a;
-      --accent-color: #3b82f6;
+      --dark-bg: #0A192F;
+      --accent-color: #FF3B30;
     }
 
     * {
@@ -32,7 +32,7 @@
     }
 
     header {
-      background: linear-gradient(135deg, var(--dark-bg), var(--primary-color));
+      background: var(--dark-bg);
       color: white;
       padding: 60px 20px;
       text-align: center;
@@ -41,14 +41,7 @@
     }
 
     header::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></svg>') repeat;
-      opacity: 0.1;
+      display: none;
     }
 
     .logo-container {
@@ -57,6 +50,7 @@
       justify-content: center;
       margin-bottom: 50px;
       animation: fadeInDown 1s ease-out;
+      padding: 20px;
     }
 
     .logo-container img {
@@ -168,7 +162,7 @@
     }
 
     a:hover {
-      color: #cc2f26; /* Slightly darker red for hover */
+      color: var(--secondary-color);
     }
 
     .expertise-tags {
@@ -191,6 +185,8 @@
 
     .expertise-tag:hover {
       background: var(--primary-color);
+      color: white;
+      transform: translateY(-2px);
     }
 
     @keyframes fadeInUp {
